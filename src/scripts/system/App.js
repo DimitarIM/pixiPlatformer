@@ -33,6 +33,9 @@ class Application {
         const runner = Matter.Runner.create();
         Matter.Runner.run(runner, this.physics);
     }
+    addFont(){
+
+    }
 }
 
 export const App = new Application();

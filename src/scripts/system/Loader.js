@@ -16,6 +16,7 @@ export class Loader {
         return new Promise(resolve => {
             this.loader.load((loader, resources) => {
                 this.resources = resources;
+                console.log(resources);
                 resolve();
             });
         })

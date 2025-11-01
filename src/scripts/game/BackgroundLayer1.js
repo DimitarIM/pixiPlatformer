@@ -1,9 +1,9 @@
 import * as PIXI from "pixi.js";
 import { App } from "../system/App";
 
-export class Background {
+export class BackgroundLayer1 {
     constructor() {
-        this.speed = App.config.bgSpeed;
+        this.speed = App.config.bg1Speed;
         this.container = new PIXI.Container();
         this.createSprites();
     }
@@ -16,7 +16,7 @@ export class Background {
     }
 
     createSprite(i) {
-        const sprite = App.sprite("bg");
+        const sprite = App.sprite("2");
 
         sprite.x = sprite.width * i;
         sprite.y = 0;

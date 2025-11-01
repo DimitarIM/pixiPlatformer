@@ -1,15 +1,36 @@
 import { Tools } from "../system/Tools";
-import { Game } from "./Game";
+import { Game } from "./scenes/Game";
+import { Win } from "./scenes/Win";
+
 
 export const Config = {
-    bgSpeed: 2,
+    bg1Speed: 0.2,
+    bg2Speed: 0.5,
+    bg3Speed: 0.7,
+    bg4Speed: 0.9,
+    bg5Speed: 2,
+    winMessage: {
+        x: window.innerWidth / 2,
+        y: window.innerHeight / 2 - 100,
+        anchor: 0.5,
+        style: {
+            fontFamily: "VT323",
+            fontSize: 100,
+            fill: ["#e5c0fc"]
+        }
+    },
+    cake: {
+        position: {
+            x: window.innerWidth / 2,
+            y: window.innerHeight / 2,
+        }
+    },
     score: {
         x: 10,
         y: 10,
         anchor: 0,
         style: {
-            fontFamily: "Verdana",
-            fontWeight: "bold",
+            fontFamily: "VT323",
             fontSize: 44,
             fill: ["#FF7F50"]
         }
@@ -26,8 +47,8 @@ export const Config = {
                 max: 9,
             },
             offset: {
-                min: 60,
-                max: 200,
+                min: 200,
+                max: 400,
             }
         }
     },
@@ -40,7 +61,7 @@ export const Config = {
         }
     },
     diamonds: {
-        chance: 0.4,
+        chance: 0.2,
         offset: {
             min: 100,
             max: 200
@@ -49,6 +70,7 @@ export const Config = {
     loader: Tools.massiveRequire(require["context"]('./../../sprites/', true, /\.(mp3|png|jpe?g)$/)),
     startScene: Game,
     scenes: {
-        "Game": Game
+        "Game": Game,
+        "Win": Win,
     },
 }

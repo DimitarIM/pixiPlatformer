@@ -8,7 +8,7 @@ export class Diamond {
     }
 
     createSprite(x, y) {
-        this.sprite = App.sprite("diamond");
+        this.sprite = App.sprite("butt");
         this.sprite.x = x;
         this.sprite.y = y;
     }

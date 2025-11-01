@@ -42,6 +42,7 @@ export class Hero {
         if (this.score >= 10 ) {
             console.log("meow"); 
             App.app.ticker.remove(this.update, this);
+            this.score = 0;
             App.scenes.start("Win");
         }
 
